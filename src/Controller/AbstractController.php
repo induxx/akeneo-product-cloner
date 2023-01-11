@@ -4,12 +4,10 @@ namespace Flagbit\Bundle\ProductClonerBundle\Controller;
 
 use Akeneo\Pim\Enrichment\Component\Product\Model\EntityWithFamilyVariantInterface;
 use Akeneo\Pim\Structure\Component\Repository\AttributeRepositoryInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-abstract class AbstractController extends Controller
+abstract class AbstractController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 {
-
     abstract protected function getNormalizer() : NormalizerInterface;
 
     abstract protected function getAttributeRepository() : AttributeRepositoryInterface;
